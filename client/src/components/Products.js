@@ -1,15 +1,15 @@
 import React from 'react';
 
-function Notice(param) {
+function Product(param) {
   return (
-    <div className="notice">
+    <div className="product">
       <h1>{param.notice.title}</h1>
       <p>{param.notice.content}</p>
     </div>
   );
 }
 
-export class Notices extends React.Component {
+export class Products extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -17,19 +17,19 @@ export class Notices extends React.Component {
   render() {
     if (this.props.loading) {
       return (
-        <div className="notices">
+        <div className="products">
           <p>Loading...</p>
         </div>
       );
     }
-    return (<div className="notices">
-      {this.props.notices.map(notice => <Notice key={notice.id} notice={notice} />)}
+    return (<div className="products">
+      {this.props.products.map(notice => <Product key={notice.id} notice={notice} />)}
       </div>
     );
   }
 }
 
-export class NoticeCreator extends React.Component {
+export class ProductCreator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -66,10 +66,10 @@ export class NoticeCreator extends React.Component {
 
   render() {
     return (
-      <div className="new-note">
-        <input className="title" type="text" placeholder="Title" value={this.state.title} onChange={this.handleTitleChange} />
-        <textarea className="content" placeholder="Enter your note here..." value={this.state.content} onChange={this.handleContentChange}></textarea>
-        <button onClick={this.handleSubmit}>Add Product</button>
+      <div className="new-product">
+        <input className="title" type="text" placeholder="Product name" value={this.state.title} onChange={this.handleTitleChange} />
+        <textarea className="content" placeholder="Enter your product description here..." value={this.state.content} onChange={this.handleContentChange}></textarea>
+        <button onClick={this.handleSubmit}>Post Product</button>
       </div>
     );
   }

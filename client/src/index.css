@@ -11,8 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-.new-note {
+.products-app>h1 {
+  margin: 16px;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-weight: 500;
+  letter-spacing: .0125em;
+  text-decoration: inherit;
+  text-transform: inherit;
+  margin-top: 0;
+}
+.new-product {
   padding: 16px;
   border-radius: 4px;
   background-color: #fff;
@@ -27,7 +36,7 @@ code {
   justify-content: flex-start;
   align-items: flex-start;
 }
-.new-note .title {
+.new-product .title {
   font-size: 1.25rem;
   line-height: 2rem;
   font-weight: 500;
@@ -38,7 +47,7 @@ code {
   margin-bottom: 8px;
 
 }
-.new-note .content {
+.new-product .content {
   font-size: .875rem;
   line-height: 1.25rem;
   font-weight: 400;
@@ -50,15 +59,15 @@ code {
   width: 100%;
   margin-bottom: 8px;
 }
-.new-note button {
+.new-product button {
   align-self: flex-end;
 }
 
-.notices {
+.products {
   padding: 16px;
 }
 
-.notices .notice {
+.products .product {
   padding: 16px;
   border-radius: 4px;
   background-color: #fff;
@@ -66,7 +75,7 @@ code {
   box-sizing: border-box;
   margin-bottom: 16px;
 }
-.notices .notice h1 {
+.products .product h1 {
   font-size: 1.25rem;
   line-height: 2rem;
   font-weight: 500;
@@ -75,7 +84,7 @@ code {
   text-transform: inherit;
   margin-top: 0;
 }
-.notices .notice p {
+.products .product p {
   font-size: .875rem;
   line-height: 1.25rem;
   font-weight: 400;

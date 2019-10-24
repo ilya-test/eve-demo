@@ -1,24 +1,24 @@
-const noticesBase = "/notices";
-export class Notices {
-  getNotices() {
-    return fetch(noticesBase).then(response => {
+const productsBase =  "/api/products";
+export class Products {
+  getProducts() {
+    return fetch(productsBase).then(response => {
       if (response.ok) {
         return response.json();
       }
-      throw new Error("Unable to fetch Notices");
+      throw new Error("Unable to fetch Products");
     });
   }
-  getNotice(id) {
+  getProduct(id) {
     const escapedId = encodeURIComponent(id);
-    return fetch(`${noticesBase}/${escapedId}`).then(response => {
+    return fetch(`${productsBase}/${escapedId}`).then(response => {
       if (response.ok) {
         return response.json();
       }
-      throw new Error("Unable to fetch Notice");
+      throw new Error("Unable to fetch Product");
     });
   }
-  createNotice(title, content) {
-    return fetch(noticesBase, {
+  createProduct(title, content) {
+    return fetch(productsBase, {
       method: "POST",
       headers: {
           'Content-Type': 'application/json',
@@ -28,7 +28,7 @@ export class Notices {
       if (response.ok) {
         return response.json();
       }
-      throw new Error("Unable to create Notice");
+      throw new Error("Unable to create Product");
     });
   }
 }
