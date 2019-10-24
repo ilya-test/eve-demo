@@ -5,7 +5,7 @@ const path = require("path");
 const logger = require("morgan");
 
 // Environmental variable for configuring backend
-const ZED_DEMO_SERVER=process.env.ZED_DEMO_SERVER || "http://zed-demo:8080";
+const ZED_DEMO_SERVER=process.env.ZED_DEMO_SERVER || "http://zeddemo-service:80";
 
 
 const app = express();
