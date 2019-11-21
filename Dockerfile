@@ -30,5 +30,7 @@ RUN npm install
 COPY server/ ./
 COPY --from=build /app/build/ /usr/src/app/public/
 
+ENV FOO BAR
+
 EXPOSE 8080
 CMD [ "node", "./bin/www" ]
